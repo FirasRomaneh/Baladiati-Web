@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {Navigate,  Route, Routes } from "react-router-dom"
+import { useContext } from "react"
+import { AuthContext } from "./context/AuthContext"
+import "./App.css";
+import Login from "./Pages/Login/Login";
+import Employees from "./Pages/Employees/Employees";
+import MainPage from "./Pages/MainPage/MainPage";
+import Sidebar from "./components/Sidebar";
 
 function App() {
+  const { isAuth } = useContext(AuthContext)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isAuth ? (
+      <div>
+        <Sidebar/>
+      <Routes>
+      <Route path="/" element={<Navigate to="/MainPage" replace />} />
+      <Route path="/MainPage" element={<MainPage />} />
+      <Route path="/MainPage/Employees" element={<Employees />}/>
+      </Routes>
+      {/* <Route path="/MainPage/Citizen" element={<Citizen />}/>
+          <Route path="/MainPage/Citizen/AddCitizen" element={<AddCitizen />}/>
+          <Route path="/MainPage/Employees/AddEmployee" element={<AddEmployee />}/>
+      <Route path="/MainPage/Complaints" element={<Complaints />}/> */}
+      </div>
+      ) : (
+        <Routes>
+        <Route path="/" element={<Login />}/>
+        <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      )}
+    </>
   );
 }
 

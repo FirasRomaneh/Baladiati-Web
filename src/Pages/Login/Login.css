@@ -1,0 +1,68 @@
+/* .main{
+    
+    border: 1px solid #3a7ca5;
+    margin: 60px 60px 60px 60px;
+    border-radius: 8px;
+} */
+
+.logo_login{
+    position: relative;
+    top: 200px;
+    left: 10%;
+  }
+  
+  .sub-main{
+    width: 300px;
+    height: 350px;
+    padding: 20px 40px;
+    border: 1px solid #3a7ca5;
+    border-radius: 5px;
+    background-color: transparent;
+    position: absolute;
+    right: 10%;
+    top: 170px;
+  }
+  
+  .LogIn{
+    color: #3a7ca5;
+    font-family: system-ui;
+    border-bottom: 1px solid #3a7ca5;
+    text-align: center;
+  }
+
+  label{
+    display: block;
+    color: black;
+    text-align: center;
+    font-family: system-ui;
+  }
+  
+  input {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #3a7ca5;
+    border-radius: 8px;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: system-ui;
+  }
+  
+  .custom-button {
+    background-color: #E17F93;
+    border-color: #E17F93;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+    
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
