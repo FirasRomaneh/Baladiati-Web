@@ -8,8 +8,8 @@ const Modal = ({ visible, children, closeModal }) => {
     return null
   }
   return ReactDOM.createPortal(
-    <div className="modal-overlay" onClick={closeModal}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+    <div className="modal-overlayfiras" onClick={closeModal}>
+      <div className="modalfiras" onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
     </div>,

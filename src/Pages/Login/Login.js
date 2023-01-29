@@ -43,24 +43,24 @@ const submit = async (e) => {
 
      <h1 className="LogIn">Log In</h1>
      <div>
-        <label htmlFor="uid">UID Number:</label>
+        <label className="label_login" htmlFor="uid">UID Number:</label>
             <input
             type="number"
             id="uid"
                 placeholder="UID"
                 value={uid}
                 onChange={(e) => setUid(e.target.value)}
-                className={errors.uid ? 'error-input' : ''}
+                className={errors.uid ? 'input_login error-input' : 'input_login'}
                 />
                 {errors.uid && <div className="error-message">{errors.uid}</div>}
-                <label htmlFor="password">Password:</label>
+                <label className="label_login" htmlFor="password">Password:</label>
                 <input
                 type="password"
                 id="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={errors.password ? 'error-input' : ''}
+                className={errors.password ? 'input_login error-input' : 'input_login'}
             />
             {errors.password && <div className="error-message">{errors.password}</div>}
                 <button className="custom-button" onClick={submit}>Log In</button>

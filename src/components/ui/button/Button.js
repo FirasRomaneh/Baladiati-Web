@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './Button.css'
 
 const Button = ({ children, type = 'primary', size = 'normal', icon = false, block = false, ...props }) => {
@@ -13,4 +12,4 @@ const Button = ({ children, type = 'primary', size = 'normal', icon = false, blo
   )
 }
 
-export default Button
+export default Button;

@@ -1,8 +1,10 @@
-import {React } from 'react'
+import {React,  useState} from 'react';
 import { Person, PencilLine, Trash } from 'phosphor-react'
-import { Button } from '../../components/ui'
+import { Button, Modal } from '../../components/ui/index'
+import EmployeeForm from '../../components/Forms/EmployeeForm';
 
-const SingleEmployee = ({ Data }) => {
+const SingleEmployee = ({ Data, handleDelete, handleClick }) => {
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <div className="trans_item">
@@ -11,25 +13,23 @@ const SingleEmployee = ({ Data }) => {
         <Person />
       </div>
       <div className="trans_item-data">
-        <h4> {Data.name} </h4>
+        <h5> UID: {Data.uid} </h5>
         <div>
-          <small> {Data.password} </small>
+          <small> Name: {Data.name} </small>, <small> Password: {Data.password} </small>
         </div>
-
       </div>
       <div className="trans_item-cta">
 
-        <Button icon>
+        <Button icon onClick={() => setShowModal(true)}>
           <PencilLine />
         </Button>
-        <Button type="error" icon>
+        <Button type="error" icon onClick={() => handleDelete(Data.uid)}>
           <Trash />
         </Button>
       </div>
-{/* 
       <Modal visible={showModal} closeModal={() => setShowModal(false)} >
-         <BudgetForm closeModal={() => setShowModal(false)} defaultData={} />
-      </Modal> */}
+          <EmployeeForm closeModal={() => {setShowModal(false);handleClick()}} defaultData={Data}/>
+      </Modal>
     </div>
   )
 }

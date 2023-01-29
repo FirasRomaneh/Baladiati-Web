@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal-overlayfiras {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-.modal-overlay .modal {
+.modal-overlayfiras .modalfiras {
   background: var(--gradient-bg-light);
   border-radius: 4px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
