@@ -2,7 +2,7 @@ import {React,  useState, useEffect} from 'react';
 import SingleEmployee from "./SingleEmployee";
 import db from "../../firasbasecon";
 import { Button, Modal} from '../../components/ui/index';
-import EmployeeForm from '../../components/Forms/EmployeeForm';
+import EmployeeForm from '../../components/Forms/EmployeeForm/EmployeeForm';
 import './Employees.css';
 
 
@@ -29,7 +29,9 @@ const Employees = () => {
       EmployeesRef.get()
       .then(snapshot => {
         snapshot.forEach(doc => {
-          data.push(doc.data());
+          let docData = doc.data();
+          delete docData.password;
+          data.push(docData);
         });
         setFilteredData(data);
         setData(data);

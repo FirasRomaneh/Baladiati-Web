@@ -1,0 +1,26 @@
+.new-Employee {
+    padding: 2rem 1.5rem;
+  }
+  
+  .new-Employee h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration:underline;
+  }
+  
+  .new-Employee button {
+    margin-top: 1rem;
+  }
+  
+  .Check_Box{
+    display: inline-block !important;
+  }
+
+  .check{
+    min-width: auto !important;
+  }
+
+  .label-check{
+    margin-left: 1%;
+  }

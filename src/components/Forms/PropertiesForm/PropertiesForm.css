@@ -1,0 +1,14 @@
+.selectType {
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #283334;
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--color-text);
+    min-width: 250px;
+  }
+  
+
+.selectType:focus{
+    border-color: var(--color-primary);
+}

@@ -1,0 +1,88 @@
+.ViewC h3{
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.img{
+    width: 40vw;
+    height: 60vh;
+    margin: auto;
+    border-radius: 50px;
+    box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.Photo{
+    text-align: center;
+    background: #ffffff;
+}
+
+.Data_viewC{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.item_viewC{
+    width: 44%;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-top: 1rem;
+    margin-left: 3%;
+    margin-right: 2%;
+    box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item_viewCD{
+  width: 94%;
+  background: #ffffff;
+  border-radius: 30px;
+  margin-top: 1rem;
+  margin-left: 3%;
+  margin-right: 2%;
+  box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ButtonViewC{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.map-link {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  .map-link:link {
+    color: #e2657c;
+  }
+  
+  .map-link:visited {
+    color: #e74462;
+  }
+  
+  .map-link:focus {
+    border-bottom: 1px solid;
+    background: #c06f7e;
+  }
+  
+  .map-link:hover {
+    border-bottom: 1px solid;
+    background: #dd7588;
+  }
+  
+  .map-link:active {
+    background: #d37d8d;
+    color: #cf7283;
+  }

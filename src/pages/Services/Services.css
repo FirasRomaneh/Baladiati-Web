@@ -1,0 +1,58 @@
+/* Styles for the tab container */
+.tab-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the tab links */
+  .tab-link {
+    width: 14.2857%;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ce1590;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Styles for the active tab link */
+  .tab-link.active {
+    background-color: #e69abd;
+    border-color: #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  /* Styles for the tab content */
+  .tab-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .input_Ser{
+    margin-left: 1%;
+    width: 37%;
+    margin-right: 1%;
+    border-radius: 300px;
+  }
+
+.HeaderSer{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background: var(--gradient-bg-light);
+  border-radius: 30px;
+  box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  text-align: center;
+  width: 35%;
+  display: flex;
+  align-items: center;
+}

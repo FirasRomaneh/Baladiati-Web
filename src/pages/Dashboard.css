@@ -1,0 +1,39 @@
+.texts {
+    text-align: center;
+    position: absolute;
+    font-family: 'Amiri', sans-serif;
+    right: 32%;
+    top: 75%;
+    width: 35%;
+    font-size: 40px;
+    color: black;
+}
+
+.img_Home1 {
+    position: absolute;
+    top: 12%;
+    right: 40%;
+    width: 20%;
+    height: 45%;
+}
+
+.img_Home2 {
+    position: absolute;
+    top: 55%;
+    right: 46%;
+    width: 10%;
+    height: 18%;
+}
+
+
+.BlankCss{
+    background-color: lightgrey;
+    Color: black;
+    padding: 10px;
+    border-radius: 35px;
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    margin-top: 20%;
+    text-align: center;
+}

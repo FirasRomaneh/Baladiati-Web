@@ -1,0 +1,44 @@
+.View h2{
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-decoration:underline;
+}
+
+.View h5{
+    color: black;
+}
+
+.Data_view{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.item_view{
+    width: 44%;
+    background: #ffffff;
+    border-radius: 30px;
+    margin-top: 1rem;
+    margin-left: 3%;
+    margin-right: 2%;
+    box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ButtonView{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ButtonCC{
+    display: inline;
+    margin-left: 1%;
+    margin-right: 1%;
+}

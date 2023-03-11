@@ -1,68 +1,97 @@
-/* .main{
-    
-    border: 1px solid #3a7ca5;
-    margin: 60px 60px 60px 60px;
-    border-radius: 8px;
-} */
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+}
 
-.logo_login{
-    position: relative;
-    top: 200px;
-    left: 10%;
-  }
-  
-  .sub-main{
-    width: 400px;
-    height: 400px;
-    padding: 20px 40px;
-    border: 1px solid #3a7ca5;
-    border-radius: 5px;
-    background-color: transparent;
-    position: absolute;
-    right: 10%;
-    top: 170px;
-  }
-  
-  .LogIn{
-    color: #3a7ca5;
-    font-family: system-ui;
-    border-bottom: 1px solid #3a7ca5;
-    text-align: center;
-  }
 
-  .label_login{
-    display: block;
-    color: black;
-    text-align: center;
-    font-family: system-ui;
-  }
-  
-  .input_login {
-    padding: 10px;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #3a7ca5;
-    border-radius: 8px;
-    background-color: white;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: system-ui;
-  }
-  
-  .custom-button {
-    background-color: #E17F93;
-    border-color: #E17F93;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-top: 15px;
-  }
-    
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-  }
+.loginimg {
+  width: 550px;
+  height: 400px;
+  margin-left: 22%;
+  margin-top: 4%;
+}
+
+.logoContainer {
+  position: relative;
+  left: 92%;
+  margin-top: 1%;
+}
+
+.logo {
+  width: 90px;
+  height: 70px;
+}
+
+
+.sub-main {
+  width: 400px;
+  height: 400px;
+  padding: 20px 40px;
+  position: absolute;
+  right: 6%;
+  top: 190px;
+}
+
+.LogIn {
+  color: #5b7684;
+  font-family: system-ui;
+  border-bottom: 1px solid #a4c3d2;
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.label_login {
+  display: block;
+  color: black;
+  text-align: center;
+  font-family: system-ui;
+
+}
+
+.input_login {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #a4c3d2;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: system-ui;
+
+}
+
+.forgot-button {
+  color: #435b68;
+  background-color: transparent;
+  border: none;
+  margin-left: 29%;
+  border-bottom: 1px solid #a4c3d2;
+  cursor: pointer;
+
+}
+
+.custom-button {
+  background-color: #E17F93;
+  border-color: #E17F93;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  margin-top: 15px;
+  align-items: center;
+  width: 70%;
+  margin-left: 16%;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

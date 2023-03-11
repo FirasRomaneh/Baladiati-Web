@@ -1,0 +1,13 @@
+.Headermade{
+    margin-left: 32.5%;
+    margin-right: 32.5%;
+    margin-bottom: 2%;
+    background: var(--gradient-bg-light);
+    border-radius: 30px;
+    box-shadow: 1px 0 12px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    text-align: center;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}

@@ -2,11 +2,11 @@
   border: none;
   outline: none;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text);
-  background: var(--color-primary);
+  background: #ffc1cc;
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
 }
@@ -14,13 +14,20 @@
 .btn-small {
   font-size: 0.75rem;
 }
+
 .btn-large {
   font-size: 1.25rem;
   padding: 0.75rem 1.25rem;
 }
 
+.btn-Firas {
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+
 .btn:hover {
-  background: var(--color-primary-light);
+  background: #de5d83;
 }
 
 .btn:active {
@@ -28,31 +35,69 @@
 }
 
 .btn-success {
-  background: var(--color-success);
+  background: #714fda;
 }
 
 .btn-success:hover {
-  background: var(--color-success-light);
+  background: #552dd8;
 }
 
 .btn-success:active {
-  background: var(--color-success-dark);
+  background: #1b0169;
 }
 
 .btn-error {
-  background: var(--color-error);
+  background: #a94064;
 }
 
 .btn-error:hover {
-  background: var(--color-error-light);
+  background: #de5d83;
 }
 
 .btn-error:active {
-  background: var(--color-error-dark);
+  background: #e47f9d;
+}
+
+.btn-view {
+  background: #d31c44;
+}
+
+.btn-view:hover {
+  background: #e65474;
+}
+
+.btn-view:active {
+  background: #61071b;
+}
+
+
+.btn-Delete {
+  background: #a10829;
+}
+
+.btn-Delete:hover {
+  background: #ac6070;
+}
+
+.btn-Delete:active {
+  background: #410512;
+}
+
+.btn-on {
+  background: #3aa83a;
+}
+
+.btn-on:hover {
+  background: #86db86;
+}
+
+.btn-on:active {
+  background: #0c550c;
 }
 
 .btn-block {
   width: 100%;
+  
 }
 
 .btn-icon {

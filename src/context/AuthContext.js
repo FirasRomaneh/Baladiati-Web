@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { createContext } from "react";
-
 import Cookies from "js-cookie";
 import { useCallback } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
 export const AuthContext = createContext()
@@ -12,23 +12,34 @@ export const AuthContext = createContext()
 export const AuthProvider = ({ children }) => {
 
   const initialToken = Cookies.get('token')
-
+  const initialUid = Cookies.get('uid')
+  const initiaAdmin = Cookies.get('admin')
   const [token, setToken] = useState(initialToken)
+  const [uid, setUid] = useState(initialUid)
+  const [admin, setAdmin] = useState(initiaAdmin)
+  const location = useLocation()
 
-  const handleSetToken = t => {
+  const handleSetToken = (t, n, d) => {
 
     if (t) {
       setToken(t)
+      setUid(n)
+      setAdmin(d)
       Cookies.set('token', t, { expires: 1 })
+      Cookies.set('uid', n, { expires: 1 })
+      Cookies.set('admin', d, { expires: 1 })
     } else {
+      setAdmin(null)
       setToken(null)
+      setUid(null)
       Cookies.remove('token')
+      Cookies.remove('uid')
+      Cookies.remove('admin')
     }
   }
 
 
   const login = async (body) => {
-    console.log(JSON.stringify(body))
     const res = await fetch('https://important-foal-buckle.cyclic.app/login', {
       method: 'POST',
       body: JSON.stringify(body),
@@ -38,9 +49,9 @@ export const AuthProvider = ({ children }) => {
     })
     const data = await res.json()
     if (res.ok) {
-      handleSetToken(data.token)
+      handleSetToken(data.token, data.uid, data.administrator)
     } else {
-      handleSetToken(null)
+      handleSetToken(null, null, null)
       throw Error(data.message)
     }
   }
@@ -54,34 +65,37 @@ export const AuthProvider = ({ children }) => {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token
-
         }
       })
-
-
       if (!res.ok) {
-        handleSetToken(null)
+        handleSetToken(null, null, null)
+      } else {
+        const data = await res.json()
+        if(data !== admin){
+          setAdmin(data)
+          Cookies.set('admin', data, { expires: 1 })
+        }
       }
     } catch (error) {
-      handleSetToken(null)
+      handleSetToken(null, null, null)
     }
-  }, [token])
+  }, [admin, token])
 
   const isMount = useRef(false)
 
   useEffect(() => {
-    if (!isMount.current) {
-      checkLogin()
-      isMount.current = true
+    if (isMount.current) {
+      checkLogin();
+    } else {
+      isMount.current = true;
     }
-  }, [checkLogin])
-
+  }, [checkLogin, location]);
 
   const logout = () => {
-    handleSetToken(null)
+    handleSetToken(null, null, null)
   }
 
-  return <AuthContext.Provider value={{ isAuth: !!token, login, logout }}>
+  return <AuthContext.Provider value={{ isAuth: !!token, login, logout, uid: uid , isAdmin: admin}}>
     {children}
   </AuthContext.Provider>
 }

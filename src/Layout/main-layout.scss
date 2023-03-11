@@ -1,0 +1,26 @@
+@use '../scss/abstracts/' as *;
+
+.main {
+    padding-left: $sideBarWidth;
+    overflow-x: hidden;
+    background: linear-gradient(106.37deg,
+            #ffcfd1 30.63%,
+            #ffcfd1 30.55%,
+            #a4c3d2 95.85%);
+
+    @include tablet {
+        padding-left: 0;
+        width: 100vw;
+    }
+
+    &__content {
+        min-height: 100vh;
+        padding: $spacing;
+
+        @include tablet {
+            padding-left: $mobileSpacing;
+            position: relative;
+        }
+    }
+
+}
